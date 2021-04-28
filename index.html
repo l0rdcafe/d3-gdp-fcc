@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <title>D3 US GDP</title>
+    <script src="main.js"></script>
+  </head>
+  <style>
+    #d3-container {
+      position: absolute;
+    }
+
+    #tooltip {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      text-align: center;
+      width: 150px;
+      height: 50px;
+      padding: 2px;
+      font: 12px;
+      background: #fff;
+      box-shadow: 1px 1px 2px;
+      border-radius: 2px;
+      pointer-events: none;
+    }
+
+    #overlay {
+      position: relative;
+      background: #000;
+      pointer-events: none;
+    }
+  </style>
+  <body>
+    <h1 id="title">US GDP</h1>
+    <div id="d3-container"></div>
+  </body>
+</html>
