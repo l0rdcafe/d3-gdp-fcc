@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .append('div')
       .attr('id', 'overlay')
       .style('opacity', 0)
-  
+
     svg = d3
     .select("#d3-container")
     .append("svg")
@@ -75,7 +75,7 @@ fetch(
       .attr("height", (d) => height - yScale(d[1]))
       .style("fill", "rebeccapurple")
       .attr("transform", "translate(60, 0)")
-      .on('mouseover', (e, bar, i) => {
+      .on('mouseover', (_, bar) => {
         overlay
           .transition()
           .duration(0)
@@ -89,7 +89,7 @@ fetch(
           .transition()
           .duration(100)
           .style('opacity', 0.9)
-        
+
         tooltip
           .html(`<br /> $${bar[1].toFixed(2)} Billion`)
           .attr('data-date', bar[0])
@@ -101,7 +101,7 @@ fetch(
           .transition()
           .duration(100)
           .style('opacity', 0)
-        
+
         overlay
           .transition()
           .duration(100)
